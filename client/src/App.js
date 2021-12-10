@@ -8,6 +8,7 @@ import {Routes, Route} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import GameBoard from './components/GameBoard';
 import Leaderboard from './components/Leaderboard'
+import About from './components/About';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/play' element={<GameBoard user={user} setUser={setUser} questions={questions}/>} />
         <Route exact path= '/profile' element={user? <Profile user={user} resetUser={setUser} questions={questions} /> : null} />
         <Route exact path='/leaderboard' element={<Leaderboard />} />
+        <Route exact path='/about' element={<About />} />
       </Routes>
     </div>
   );

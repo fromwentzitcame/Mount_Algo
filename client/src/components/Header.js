@@ -27,7 +27,7 @@ function Header({setLoggedIn, loggedIn}) {
                    <span>HOME</span>
                </NavLink>
                <NavLink className='links' to={loggedIn? '/profile' : '/login'}>
-                   <img src="/images/search-icon.svg" alt=''/>
+                   <img src="/images/user-32.png" alt=''/>
                    <span>PROFILE</span>
                </NavLink>
                <NavLink className='links' to={loggedIn? `/play` : '/login'}>
@@ -36,7 +36,11 @@ function Header({setLoggedIn, loggedIn}) {
                </NavLink>
                <NavLink className='links' to='/leaderboard'>
                  <img src="/images/trophy-3-256.png" alt=''/>   
-                 <span>   LEADERBOARD</span>
+                 <span>LEADERBOARD</span>
+               </NavLink>
+               <NavLink className='links' to='/about'>
+                 <img src="/images/search-icon.svg" alt=''/>   
+                 <span>ABOUT</span>
                </NavLink>
             </NavMenu>
             <Welcome>{loggedIn ? `HELLO, ${loggedIn.username.toUpperCase()}!` : null }</Welcome>

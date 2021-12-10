@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import '../Profile.css'
 import { Label, Button } from "../styles"
-import {prompts} from './prompts n solution/prompt.js'
 import {useNavigate} from 'react-router-dom'
 import swal from 'sweetalert'
 

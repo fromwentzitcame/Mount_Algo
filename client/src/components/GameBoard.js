@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-// import {prompts} from './prompts n solution/prompt.js'
-// import {solutions} from './prompts n solution/solution.js'
 import VictoryPage from './VictoryPage.js'
 import { Button, Input, FormField, Label } from '../styles'
 import { useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 import '../Gameboard.css'
 
 function GameBoard({user, setUser, questions}) {
@@ -27,7 +26,7 @@ function GameBoard({user, setUser, questions}) {
             .then(response => response.json())
             .then(data => setUser(data))
         } else {
-            // need to display message of incorrect here
+            swal("Try Again")
             console.log('Incorrect Solution: ' + solution )
         }
     }
