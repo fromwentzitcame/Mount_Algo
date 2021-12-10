@@ -19,7 +19,18 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
           setQuestions(data)
-          console.log(data[0].prompt)
+      });
+    }, []);
+
+    useEffect(() => {
+      fetch('/me')
+      .then(response => {
+        if (response.ok) {
+          response.json()
+          .then(user => {
+            setUser(user);
+          });
+        }
       });
     }, []);
 

@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import styled from 'styled-components'
+import React, {useState} from 'react'
 import VictoryPage from './VictoryPage.js'
 import { Button, Input, FormField, Label } from '../styles'
 import { useNavigate } from 'react-router-dom'
@@ -13,7 +12,7 @@ function GameBoard({user, setUser, questions}) {
     function checkAnswer(e) {
         e.preventDefault();
         console.log(user)
-        if(`${solution}` == `${questions[user.score].answer}`) {
+        if(`${solution}` === `${questions[user.score].answer}`) {
             fetch(`/users/${user.id}`, {
                 method: "PATCH",
                 headers: {
@@ -60,12 +59,12 @@ function GameBoard({user, setUser, questions}) {
                 </div> ) : 
                 <Button className="end" onClick={() => {navigate('/')}}>RETURN HOME</Button> 
                 }
-            {user.score===0? <img src={user.avatar.img_url} className="q1-avatar"/> : null}
-            {user.score===1? <img src={user.avatar.img_url} className="q2-avatar"/> : null}
-            {user.score===2? <img src={user.avatar.img_url} className="q3-avatar"/> : null}
-            {user.score===3? <img src={user.avatar.img_url} className="q4-avatar"/> : null}
-            {user.score===4? <img src={user.avatar.img_url} className="q5-avatar"/> : null}
-            {user.score===5? <img src={user.avatar.img_url} className="winner-avatar"/> : null}
+            {user.score===0? <img src={user.avatar.img_url} className="q1-avatar" alt={user.avatar.name}/> : null}
+            {user.score===1? <img src={user.avatar.img_url} className="q2-avatar" alt={user.avatar.name}/> : null}
+            {user.score===2? <img src={user.avatar.img_url} className="q3-avatar" alt={user.avatar.name}/> : null}
+            {user.score===3? <img src={user.avatar.img_url} className="q4-avatar" alt={user.avatar.name}/> : null}
+            {user.score===4? <img src={user.avatar.img_url} className="q5-avatar" alt={user.avatar.name}/> : null}
+            {user.score===5? <img src={user.avatar.img_url} className="winner-avatar" alt={user.avatar.name}/> : null}
             <Label className="gatekeeper">The Gatekeeper</Label>
             <Label className="elf">Elven Pass</Label>
             <Label className="inn">Gambler's Inn</Label>
@@ -76,49 +75,5 @@ function GameBoard({user, setUser, questions}) {
         </>
     )
 }
-
-const Board = styled.div`
-    /* display: flex; */
-    align-items: center;
-    justify-content: left;
-    margin-top: 100px;
-    margin-left: 50px;
-    height: 50%
-`
-
-const Prompt = styled.div`
-    margin: 0px;
-    position: absolute; 
-    margin-top: 270px;
-    width: 600px;
-`
-
-const SolutionInput = styled.input`
-    font-size: 13px;
-    /* position: absolute; */
-    padding: 10px;
-    margin: 10px;
-    background: papayawhip;
-    border: none;
-    border-radius: 3px;
-    margin-left: 0px;
-    margin-top: 200px
-`
-const InputButton = styled.button`
-    cursor: pointer;
-    font-size: 13px;
-    position: absolute;
-    padding: 10px;
-    margin: 10px;
-    background-color: papayawhip;
-    border: none;
-    border-radius: 3px;
-    margin-left: 0px;
-    margin-top: 245px;
-    :hover{
-        background-color: lightgray;
-    }
-    
-`
 
 export default GameBoard

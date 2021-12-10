@@ -89,8 +89,8 @@
 }
 
 .winner-avatar {
-    grid-column: 6;
-    grid-row: 8;
+    grid-column: 7;
+    grid-row: 1;
     height: 75px;
     background-color: #EEEEEE90;
     border: 2px solid #363636;
@@ -142,11 +142,11 @@
 }
 
 
-.swal-modal {
+/* .swal-modal {
     background-color: rgba(207, 107, 25, 0.918);
     border: 3px solid gray;
   }
-  
+
 .swal-button {
   padding: 7px 19px;
   border-radius: 2px;
@@ -154,4 +154,4 @@
   font-size: 12px;
   border: 1px solid #7C7C7C;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-}
+} */

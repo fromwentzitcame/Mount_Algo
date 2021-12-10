@@ -5,7 +5,7 @@ function Card({data, idx}) {
     return (
         <div id="profile-card">
             <div className='grid-2'>
-                <img id='profile-avatar' src={data.avatar.img_url}/>
+                <img id='profile-avatar' src={data.avatar.img_url} alt={data.avatar.name}/>
             </div>
             <div className='grid-3'>
                 <h2>Rank: {idx + 1}</h2>

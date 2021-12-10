@@ -1,15 +1,14 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import '../App.css'
 import {useNavigate} from 'react-router-dom'
-import {Button} from '../styles'
 
 function Header({setLoggedIn, loggedIn}) {
     let navigate = useNavigate()
-
     
     function handleLogout() {
+      console.log("in logout function")
       fetch("/logout", { method: "DELETE" })
       .then((response) => {
         if (response.ok) {
@@ -44,7 +43,7 @@ function Header({setLoggedIn, loggedIn}) {
                </NavLink>
             </NavMenu>
             <Welcome>{loggedIn ? `HELLO, ${loggedIn.username.toUpperCase()}!` : null }</Welcome>
-            { !loggedIn ? <Login onClick={() => {navigate('/login')}}>LOGIN</Login> : <Button onClick={() => handleLogout()}>LOGOUT</Button>}
+            { !loggedIn ? <Login onClick={() => {navigate('/login')}}>LOGIN</Login> : <Logout onClick={() => handleLogout()}>LOGOUT</Logout>}
         </Nav>
     )
 }
@@ -120,6 +119,22 @@ const NavMenu = styled.div`
 `
 
 const Login = styled.a`
+  background-color: white;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  transition: all 0.2s ease 0s;
+  &:hover {
+    cursor: pointer;
+    background: #febd97;
+    color: #000;
+    border-color: white;
+  }
+`;
+
+const Logout = styled.a`
   background-color: white;
   padding: 8px 16px;
   text-transform: uppercase;

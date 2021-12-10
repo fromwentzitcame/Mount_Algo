@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Profile.css'
-import { Label, Button } from "../styles"
-import {useNavigate} from 'react-router-dom'
+// import { Label, Button } from "../styles"
+// import {useNavigate} from 'react-router-dom'
 
 function About({user, resetUser, questions}) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     return (
         <div id="profile-card">
@@ -27,3 +27,7 @@ function About({user, resetUser, questions}) {
 }
 
 export default About
+
+
+// save for later:
+// <div>Avatar icons made by <a href="https://www.flaticon.com/authors/maxicons" title="max.icons">max.icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

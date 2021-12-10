@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AssignAvatar from "./AssignAvatar";
-import styled from "styled-components";
 import { Button, Input, FormField, Label, UsernameField, ChoiceDisplay } from "../styles";
 import {useNavigate} from 'react-router-dom'
 
@@ -86,14 +85,3 @@ function Signup({ onLogin }) {
   );
 }
 export default Signup
-
-
-// const UsernameField = styled.div`
-//     display: flex;
-//     position: relative;
-//     justify-content:center;
-//     margin-top: 100px;
-//     margin-left: 20px;
-//     margin-right: 20px;
-//     align-items: center;
-// `;
