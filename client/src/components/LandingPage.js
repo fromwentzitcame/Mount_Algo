@@ -51,7 +51,7 @@ const InstructionPargph = styled.p`
     display: flex;
     width: 1000px;
     font-weight: bold;
-    font-color: #eab676;
+    color: #eab676;
     font-size: 0.75em;
     text-align: center
 `
