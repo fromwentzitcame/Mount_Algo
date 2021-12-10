@@ -25,12 +25,13 @@ function App() {
     useEffect(() => {
       fetch('/me')
       .then(response => {
+        console.log(response)
         if (response.ok) {
           response.json()
           .then(user => {
             setUser(user);
           });
-        }
+        } else {console.log("not yet")}
       });
     }, []);
 

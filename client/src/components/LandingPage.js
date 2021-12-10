@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {useNavigate} from 'react-router-dom'
 import {Button} from "../styles"
 
-function LandingPage({user}) {
+function LandingPage({isLoggedIn}) {
     const navigate = useNavigate();
 
     return (
@@ -16,7 +16,7 @@ function LandingPage({user}) {
             <InstructionPargph> 
                    <span className="subheading-fade">To complete these challenges you will need to open your favorite IDE. We recommend writing your code in the IDE and then running it in the browser console to test output. Copy the output and paste it into the solution field. </span>
             </InstructionPargph>    
-            {user ? <Button onClick={() => navigate('/play')}>PLAY NOW!</Button> : <Button onClick={() => navigate('/login')}>PLAY NOW!</Button> }      
+            {!isLoggedIn ? <Button onClick={() => {navigate('/login')}}>PLAY NOW!</Button> : <Button onClick={() => {navigate('/play')}}>PLAY NOW!</Button> }      
             </PlayNowBtn>
         </div>
     )
