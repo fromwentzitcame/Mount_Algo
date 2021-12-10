@@ -7,14 +7,14 @@
     padding-bottom: 30px;
     display: grid;
     grid-template-columns: [first] 250px [line2] 1fr [line3] 1fr [end];
-    grid-template-rows: [row1-start] 15% [row1-end] 240px [third-line] 15% [fourth-line] min-content [last-line];
+    grid-template-rows: [row1-start] 15% [row1-end] min-content [third-line] 10% [fourth-line] 15% [fifth-line] 15% [last-line];
     grid-gap: 10px;
     border: 2.5px solid #363636;
     border-radius: 15px;
 }
 
 .grid-1 {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
 }
 
 .grid-2 {
@@ -41,9 +41,14 @@
     justify-items: center;
 }
 
+.grid-6 {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 3;
+}
+
 #profile-avatar {
     background-color: #EEEEEE90;
-    height: 240px;
+    height: 225px;
     border: 2px solid #363636;
     border-radius:10px;
 }

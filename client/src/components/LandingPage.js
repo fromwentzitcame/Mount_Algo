@@ -17,7 +17,7 @@ function LandingPage({user}) {
             <h3 className="subheading-fade">Algorithm Adventures Await!</h3>
         </MtAlgoHeader>
             <PlayNowBtn>
-            {user ? <Button onClick={() => navigate('/play')}>PLAY NOW!</Button> : <Button onClick={() => navigate('/login')}>PLAY NOW!</Button> }
+            {!user ? <Button onClick={() => navigate('/play')}>PLAY NOW!</Button> : <Button onClick={() => navigate('/login')}>PLAY NOW!</Button> }
             <Instructions>
                 <button onClick={() => toggleInstructions()}>
                     INSTRUCTIONS
