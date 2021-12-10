@@ -6,6 +6,7 @@ import VictoryPage from './VictoryPage.js'
 import { Button, Input, FormField, Label } from '../styles'
 import { useNavigate } from 'react-router-dom'
 import '../Gameboard.css'
+import swal from 'sweetalert'
 
 function GameBoard({user, setUser, questions}) {
     const navigate = useNavigate()
@@ -27,8 +28,7 @@ function GameBoard({user, setUser, questions}) {
             .then(response => response.json())
             .then(data => setUser(data))
         } else {
-            // need to display message of incorrect here
-            console.log('Incorrect Solution: ' + solution )
+            swal("Try Again")
         }
     }
 
@@ -77,49 +77,5 @@ function GameBoard({user, setUser, questions}) {
         </>
     )
 }
-
-const Board = styled.div`
-    /* display: flex; */
-    align-items: center;
-    justify-content: left;
-    margin-top: 100px;
-    margin-left: 50px;
-    height: 50%
-`
-
-const Prompt = styled.div`
-    margin: 0px;
-    position: absolute; 
-    margin-top: 270px;
-    width: 600px;
-`
-
-const SolutionInput = styled.input`
-    font-size: 13px;
-    /* position: absolute; */
-    padding: 10px;
-    margin: 10px;
-    background: papayawhip;
-    border: none;
-    border-radius: 3px;
-    margin-left: 0px;
-    margin-top: 200px
-`
-const InputButton = styled.button`
-    cursor: pointer;
-    font-size: 13px;
-    position: absolute;
-    padding: 10px;
-    margin: 10px;
-    background-color: papayawhip;
-    border: none;
-    border-radius: 3px;
-    margin-left: 0px;
-    margin-top: 245px;
-    :hover{
-        background-color: lightgray;
-    }
-    
-`
 
 export default GameBoard

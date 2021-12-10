@@ -18,7 +18,6 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
           setQuestions(data)
-          console.log(data[0].prompt)
       });
     }, []);
 
@@ -36,6 +35,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;

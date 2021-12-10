@@ -113,3 +113,17 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.swal-modal {
+    background-color: rgba(207, 107, 25, 0.918);
+    border: 3px solid gray;
+  }
+.swal-button { 
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #7a5c50;
+  font-size: 12px;
+  border: 1px solid #7c7c7c;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+   
+}

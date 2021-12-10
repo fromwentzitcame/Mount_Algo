@@ -21,6 +21,7 @@ function Header({setLoggedIn, loggedIn}) {
   
     return (
         <Nav>
+          
             <NavMenu>
                <NavLink className='links' to='/'>
                    <img src="/images/home-icon.svg" alt=''/>
@@ -30,11 +31,11 @@ function Header({setLoggedIn, loggedIn}) {
                    <img src="/images/search-icon.svg" alt=''/>
                    <span>PROFILE</span>
                </NavLink>
-               <NavLink className='links' to={loggedIn? `/play` : '/login'}>
+               <NavLink className='links' to={loggedIn? `/play` : `/login`}>
                    <img src="/images/play-icon-white.png" alt=''/>
                    <span>PLAY</span>
                </NavLink>
-               <NavLink className='links' to='/leaderboard'>
+               <NavLink className='links' to={ loggedIn? '/leaderboard' : '/login'}>
                  <img src="/images/trophy-3-256.png" alt=''/>   
                  <span>   LEADERBOARD</span>
                </NavLink>

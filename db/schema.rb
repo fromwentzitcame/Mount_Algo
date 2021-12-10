@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2021_12_06_153829) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "game_instances", force: :cascade do |t|
+    t.integer "score"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_game_instances_on_user_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.text "prompt"
     t.text "question"
