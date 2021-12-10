@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {useNavigate} from 'react-router-dom'
 import {Button} from "../styles"
 
 function LandingPage({user}) {
     const navigate = useNavigate();
-    const [hideInstructions, setHideInstructions] = useState(false)
 
-    const toggleInstructions = () => {
-        setHideInstructions(!hideInstructions)
-    }
     return (
         <div>
         <MtAlgoHeader>
