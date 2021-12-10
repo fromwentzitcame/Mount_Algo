@@ -18,7 +18,7 @@ function LandingPage({user}) {
         </MtAlgoHeader>
             <PlayNowBtn>
             <InstructionPargph> 
-                   <text class="subheading-fade">To complete these challenges you will need to open your favorite IDE. We reccomend writing your code in the IDE and then running it in the browser console to test output. Copy the output and paste it into the solution field below. </text>
+                   <text class="subheading-fade">To complete these challenges you will need to open your favorite IDE. We recommend writing your code in the IDE and then running it in the browser console to test output. Copy the output and paste it into the solution field. </text>
             </InstructionPargph>    
             {user ? <Button onClick={() => navigate('/play')}>PLAY NOW!</Button> : <Button onClick={() => navigate('/login')}>PLAY NOW!</Button> }           
             </PlayNowBtn>

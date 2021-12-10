@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../Profile.css'
 import { Label, Button } from "../styles"
 import {prompts} from './prompts n solution/prompt.js'
 import {useNavigate} from 'react-router-dom'
 import swal from 'sweetalert'
 
-function Profile({user, resetUser}) {
+function Profile({user, resetUser, questions}) {
     const navigate = useNavigate()
+    const [showQ, setShowQ] = useState(false)
+    const [visibleQ, setVisibleQ] = useState({})
 
     function handleDelete(user) {
         swal({
@@ -33,15 +35,28 @@ function Profile({user, resetUser}) {
           });
     }
 
-    function conquered(prompts) {
-        return prompts.filter(prompt => {
-            if (user.score <= prompt.id) {
-                return (<div>
-                    <Label>Q{prompt.id}</Label>
-                    <button>See Question</button>
+    function handleShowQ(question) {
+        if (question.id === visibleQ.id) {
+            setShowQ(showQ => !showQ)
+        } else if (showQ === false) {
+            setShowQ(showQ => !showQ)
+        }
+    }
+
+    function captureVisibleQ(clickedQ) {
+        let quest = questions.filter(question => question.id === clickedQ.id)
+        setVisibleQ(quest[0])
+    }
+
+    function conquered(questions) {
+        return (questions.map(question => {
+            if ((user.score + 1) > question.id) {
+                return (<div key={question.id}>
+                    <Label>Q{question.id}</Label>
+                    <Button onClick={ () => {handleShowQ(question); captureVisibleQ(question) }}>See Question</Button>
                     </div>)
             }}
-            )
+            ))
     }
     
     return (
@@ -61,12 +76,10 @@ function Profile({user, resetUser}) {
                 <h2>Conquered Quest-ions</h2>
             </div>
             <div className="grid-5">
-                {prompts.map(prompt => {
-                return (<div>
-                    {/* <Label>Q{prompt}</Label> */}
-                    <Button>See Question</Button>
-                    </div>)}
-                )}
+                {conquered(questions)}
+            </div>
+            <div className="grid-6">
+                {showQ ? <p>{visibleQ.question}</p> : null}
             </div>
         </div>
     )
