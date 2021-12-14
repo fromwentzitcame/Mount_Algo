@@ -1,7 +1,7 @@
 # Mount Algo
 ## Your Algorithm Adventures Await!
 
-[Click here to play Mount Algo](https://mount-algo.herokuapp.com/)
+[Click here to play Mount Algo](https://mt-algo.herokuapp.com/)
 
 Collaborators: [Joshua Andes](https://github.com/andesjoshua), [Shannon Sorensen](https://github.com/ShanSorensen), [Alex Wentz](https://github.com/fromwentzitcame)
 
