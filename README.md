@@ -5,7 +5,7 @@
 
 Collaborators: [Joshua Andes](https://github.com/andesjoshua), [Shannon Sorensen](https://github.com/ShanSorensen), [Alex Wentz](https://github.com/fromwentzitcame)
 
-Check out some of my other work here: [insert a portfolio site url](https://www.fromwentzitcame.com/)
+Check out some of my other work here: [FromWentzItCame](https://www.fromwentzitcame.com/)
 
 ### Description
 - **Goal:** To gamify working with algorithms and make practicing algorithms more fun and engaging
