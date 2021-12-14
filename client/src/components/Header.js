@@ -37,10 +37,6 @@ function Header({setLoggedIn, loggedIn}) {
                  <img src="/images/trophy-3-256.png" alt=''/>   
                  <span>LEADERBOARD</span>
                </NavLink>
-               <NavLink className='links' to='/about'>
-                 <img src="/images/search-icon.svg" alt=''/>   
-                 <span>ABOUT</span>
-               </NavLink>
             </NavMenu>
             <Welcome>{loggedIn ? `HELLO, ${loggedIn.username.toUpperCase()}!` : null }</Welcome>
             { !loggedIn ? <Login onClick={() => {navigate('/login')}}>LOGIN</Login> : <Logout onClick={() => handleLogout()}>LOGOUT</Logout>}

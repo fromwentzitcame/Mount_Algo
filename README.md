@@ -1,4 +1,45 @@
-# Project Template: React/Rails API
+# Mount Algo
+## Your Algorithm Adventures Await!
+
+[Click here to play Mount Algo](www.google.com)
+
+Collaborators: [Joshua Andes](https://github.com/andesjoshua), [Shannon Sorensen](https://github.com/ShanSorensen), [Alex Wentz](https://github.com/fromwentzitcame)
+
+Check out some of my other work here: [insert a portfolio site url]()
+
+### Description
+- **Goal:** To gamify working with algorithms and make practicing algorithms more fun and engaging
+- **Gameplay:** Using their preferred IDE, a player works through questions that require using algorithmic thinking to solve. As they solve questions, they progress in their journey up Mount Algo and their score increases. The game is won when they reach the summit of Mount Algo.
+- **User experience:** Users create a profile and must login to play. There is a profile page for logged in users to review the questions they've gotten correct, as well as a leaderboard to see how others have done.
+
+### Primary Tools and Technologies Used
+- Frontend: React
+- Backend: Ruby on Rails
+- User authentication: signup/login/logout
+- Other tools:
+  - ActiveRecord, custom routes and methods, full CRUD, utilize cookies/user sessions
+  - ReactRouter, useNavigate, NavLink
+  - CSS: SweetAlert, styled-components, CSS Grid, conditional rendering
+  - Postgresql, Heroku
+
+### Challenges Faced?
+- The first and primary challenge was getting communication between frontend and backend to work properly.
+- We also had to solve the problem of getting user score to update and affect the page render in gameplay.
+- The last issue we struggled with was getting the user login to persist through refresh or leaving the page.
+
+### Future Additions?
+We'd love to add additional quests!
+
+
+
+<div>Avatar icons made by
+        <a href="https://www.flaticon.com/authors/maxicons" title="max.icons">max.icons</a>
+        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div>
+
+
+
+<!-- # Project Template: React/Rails API
 
 ## Description
 
@@ -324,4 +365,4 @@ For additional support, check out these guides on Heroku:
 
 [postgres downloads page]: https://postgresapp.com/downloads.html
 [heroku rails deploying guide]: https://devcenter.heroku.com/articles/getting-started-with-rails6
-[troubleshooting guide on heroku]: https://devcenter.heroku.com/articles/getting-started-with-rails6#troubleshooting
+[troubleshooting guide on heroku]: https://devcenter.heroku.com/articles/getting-started-with-rails6#troubleshooting -->
